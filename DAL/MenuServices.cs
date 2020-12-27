@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Model;
 using System.Data;
 using System.Data.SqlClient;
-using DAL;
+
 
 namespace DAL
 {
@@ -47,6 +47,30 @@ namespace DAL
             return menulist;
 
 
+        }
+
+        public int updatemenu(Menu menu)
+        {
+            string sql = "update Menu set price=@price where name=@name";
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@price", menu.price),
+                new SqlParameter("@name", menu.name),
+            };
+            // int result = SqlHelper.
+            int result = SqlHelper.ExecuteNonQuery(SqlHelper.ConnectionString, CommandType.Text, sql, par);
+            return result;
+        }
+        //删除菜单
+        public int deletemenu(int id)
+        {
+            string sql = "delete from Menu where id=@id";
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@id", id)
+            };
+            int result = SqlHelper.ExecuteNonQuery(SqlHelper.ConnectionString, CommandType.Text, sql, par);
+            return result;
         }
     }
 }

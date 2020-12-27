@@ -46,11 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CateringManagerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CateringManagerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Desk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desk.Designer.cs">
+      <DependentUpon>Desk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeskList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeskList.Designer.cs">
+      <DependentUpon>DeskList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomList.Designer.cs">
+      <DependentUpon>CustomList.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -66,8 +89,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Desk.resx">
+      <DependentUpon>Desk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeskList.resx">
+      <DependentUpon>DeskList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomList.resx">
+      <DependentUpon>CustomList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -84,6 +116,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CateringManagerDataSet.xsc">
+      <DependentUpon>CateringManagerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CateringManagerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CateringManagerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CateringManagerDataSet.xss">
+      <DependentUpon>CateringManagerDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

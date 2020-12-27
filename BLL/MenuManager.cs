@@ -19,5 +19,17 @@ namespace BLL
         {
             return new MenuServices().getmenulist();
         }
+
+        public int updatemenu(Menu menu)
+        {
+            return new MenuServices().updatemenu(menu);
+
+        }
+
+        public int deletemenu(int id)
+        {
+            return new MenuServices().deletemenu(id);
+
+        }
     }
 }
