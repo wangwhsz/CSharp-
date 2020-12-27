@@ -1,0 +1,2 @@
+C:\Users\WangzyaaaA\Desktop\WangzyaaaA\CateringManager\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+C:\Users\WangzyaaaA\Desktop\WangzyaaaA\CateringManager\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
