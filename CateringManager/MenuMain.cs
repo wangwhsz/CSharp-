@@ -91,11 +91,11 @@ namespace CateringManager
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("请选择餐桌");
-                return;
-            }
+            // if (listView1.SelectedItems.Count == 0)
+            // {
+            //     MessageBox.Show("请选择餐桌");
+            //     return;
+            // }
 
             // txtDeskNo.Text = lsView.SelectedItems[0].Text;
             CustomList list = new CustomList(listView1);

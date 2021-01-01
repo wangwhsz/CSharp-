@@ -32,11 +32,11 @@ namespace CateringManager
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDeskNo = new System.Windows.Forms.TextBox();
             this.txtNum = new System.Windows.Forms.TextBox();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.cboDeskno = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -66,14 +66,6 @@ namespace CateringManager
             this.label3.TabIndex = 0;
             this.label3.Text = "备注";
             // 
-            // txtDeskNo
-            // 
-            this.txtDeskNo.Enabled = false;
-            this.txtDeskNo.Location = new System.Drawing.Point(133, 34);
-            this.txtDeskNo.Name = "txtDeskNo";
-            this.txtDeskNo.Size = new System.Drawing.Size(118, 28);
-            this.txtDeskNo.TabIndex = 1;
-            // 
             // txtNum
             // 
             this.txtNum.Location = new System.Drawing.Point(133, 139);
@@ -97,6 +89,7 @@ namespace CateringManager
             this.button1.TabIndex = 2;
             this.button1.Text = "开单";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -107,16 +100,25 @@ namespace CateringManager
             this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // cboDeskno
+            // 
+            this.cboDeskno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDeskno.FormattingEnabled = true;
+            this.cboDeskno.Location = new System.Drawing.Point(146, 34);
+            this.cboDeskno.Name = "cboDeskno";
+            this.cboDeskno.Size = new System.Drawing.Size(168, 26);
+            this.cboDeskno.TabIndex = 3;
+            // 
             // CustomList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 450);
+            this.Controls.Add(this.cboDeskno);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.txtNum);
-            this.Controls.Add(this.txtDeskNo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -133,10 +135,10 @@ namespace CateringManager
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDeskNo;
         private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cboDeskno;
     }
 }
