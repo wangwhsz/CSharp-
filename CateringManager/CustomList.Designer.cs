@@ -73,6 +73,7 @@ namespace CateringManager
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(118, 28);
             this.txtNum.TabIndex = 1;
+            this.txtNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNum_KeyPress);
             // 
             // txtRemark
             // 
@@ -86,7 +87,7 @@ namespace CateringManager
             // 
             this.button1.Location = new System.Drawing.Point(119, 376);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 38);
             this.button1.TabIndex = 2;
             this.button1.Text = "开单";
             this.button1.UseVisualStyleBackColor = true;
@@ -96,10 +97,11 @@ namespace CateringManager
             // 
             this.button2.Location = new System.Drawing.Point(334, 376);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 38);
             this.button2.TabIndex = 2;
             this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtDeskNo
             // 
@@ -113,7 +115,7 @@ namespace CateringManager
             // 
             this.btnUpdate.Location = new System.Drawing.Point(226, 376);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(75, 38);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "button3";
             this.btnUpdate.UseVisualStyleBackColor = true;

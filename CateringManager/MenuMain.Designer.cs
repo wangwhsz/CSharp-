@@ -44,7 +44,14 @@ namespace CateringManager
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.listView1 = new System.Windows.Forms.ListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.dgvMenuMain = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.结账ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenuMain)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -114,6 +121,7 @@ namespace CateringManager
             this.toolStripButton4.Size = new System.Drawing.Size(104, 94);
             this.toolStripButton4.Text = "结账";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripSeparator1
             // 
@@ -155,6 +163,7 @@ namespace CateringManager
             this.toolStripButton7.Size = new System.Drawing.Size(104, 89);
             this.toolStripButton7.Text = "退出";
             this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // toolStripButton8
             // 
@@ -176,14 +185,17 @@ namespace CateringManager
             // 
             // listView1
             // 
+            this.listView1.Activation = System.Windows.Forms.ItemActivation.TwoClick;
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.HideSelection = false;
             this.listView1.LargeImageList = this.imageList1;
             this.listView1.Location = new System.Drawing.Point(0, 211);
+            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(854, 556);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // imageList1
             // 
@@ -192,11 +204,58 @@ namespace CateringManager
             this.imageList1.Images.SetKeyName(0, "yr.bmp");
             this.imageList1.Images.SetKeyName(1, "wr.bmp");
             // 
+            // dgvMenuMain
+            // 
+            this.dgvMenuMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMenuMain.Location = new System.Drawing.Point(927, 211);
+            this.dgvMenuMain.Name = "dgvMenuMain";
+            this.dgvMenuMain.RowHeadersWidth = 62;
+            this.dgvMenuMain.RowTemplate.Height = 30;
+            this.dgvMenuMain.Size = new System.Drawing.Size(382, 469);
+            this.dgvMenuMain.TabIndex = 2;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.结账ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 34);
+            // 
+            // 结账ToolStripMenuItem
+            // 
+            this.结账ToolStripMenuItem.Name = "结账ToolStripMenuItem";
+            this.结账ToolStripMenuItem.Size = new System.Drawing.Size(116, 30);
+            this.结账ToolStripMenuItem.Text = "结账";
+            this.结账ToolStripMenuItem.Click += new System.EventHandler(this.结账ToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.label1.Location = new System.Drawing.Point(964, 704);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 47);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "总金额";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.lblTotal.Location = new System.Drawing.Point(1074, 704);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 47);
+            this.lblTotal.TabIndex = 5;
+            // 
             // MenuMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1309, 769);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvMenuMain);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.toolStrip1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -206,6 +265,8 @@ namespace CateringManager
             this.Load += new System.EventHandler(this.MenuMain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenuMain)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +287,10 @@ namespace CateringManager
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.DataGridView dgvMenuMain;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 结账ToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

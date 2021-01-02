@@ -35,7 +35,7 @@ namespace CateringManager
                 // this.Hide();
                 
                 MenuMain menuMain = new MenuMain();
-                menuMain.Show();
+                menuMain.ShowDialog();
 
             }
             else
@@ -48,6 +48,11 @@ namespace CateringManager
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

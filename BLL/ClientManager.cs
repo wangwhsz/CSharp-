@@ -10,7 +10,7 @@ namespace BLL
             // return new ClientService().selectandinsert(name);
         }
 
-        public List<Menu> getitem(string name)
+        public List<Client> getitem(string name)
         {
             return new ClientService().getitem(name);
         }
@@ -19,9 +19,31 @@ namespace BLL
         {
             // return new ClientService().insertitem(name);
         }
-        public List<Client> getclientmenulist()
+        public List<Client> getclientmenulist(string deskno)
         {
-            return new ClientService().getclientmenulist();
+            return new ClientService().getclientmenulist(deskno);
+        }
+
+        public int InsertClient(Client client,string deskno)
+        {
+            return new ClientService().InsertClient(client,deskno);
+
+        }
+
+
+
+
+
+        public int deletemenu(Client client,string deskno)
+        {
+            
+            return new ClientService().deletemenu(client,deskno);
+        }
+
+        public  int deletemenu( string deskno)
+        {
+
+            return new ClientService().deletemenu(deskno);
         }
     }
 }

@@ -58,6 +58,7 @@
             this.BtnExit.TabIndex = 5;
             this.BtnExit.Text = "退出";
             this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // txtAdmin
             // 

@@ -31,7 +31,6 @@ namespace CateringManager
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnDel = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -58,7 +57,7 @@ namespace CateringManager
             // 
             // BtnDel
             // 
-            this.BtnDel.Location = new System.Drawing.Point(694, 139);
+            this.BtnDel.Location = new System.Drawing.Point(135, 360);
             this.BtnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDel.Name = "BtnDel";
             this.BtnDel.Size = new System.Drawing.Size(84, 28);
@@ -67,19 +66,10 @@ namespace CateringManager
             this.BtnDel.UseVisualStyleBackColor = true;
             this.BtnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(547, 139);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Controls.Add(this.BtnDel);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.txtname);
@@ -100,9 +90,9 @@ namespace CateringManager
             this.btnAdd.Location = new System.Drawing.Point(47, 406);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(84, 31);
+            this.btnAdd.Size = new System.Drawing.Size(84, 37);
             this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "button1";
+            this.btnAdd.Text = "添加";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.BtnaddClick);
             // 
@@ -111,7 +101,7 @@ namespace CateringManager
             this.btnUpdate.Location = new System.Drawing.Point(212, 406);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(84, 28);
+            this.btnUpdate.Size = new System.Drawing.Size(84, 37);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -157,8 +147,6 @@ namespace CateringManager
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 858);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.BtnDel);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Menu";
@@ -176,7 +164,6 @@ namespace CateringManager
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnDel;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

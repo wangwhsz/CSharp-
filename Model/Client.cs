@@ -8,6 +8,7 @@ namespace Model
 {
     public class Client
     {
+        public int id { set; get; }
         public string name { get; set; }
         public decimal price { get; set; }
         public string deskno { get; set; }
