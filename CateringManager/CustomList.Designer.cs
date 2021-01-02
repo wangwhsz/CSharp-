@@ -37,6 +37,7 @@ namespace CateringManager
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.cboDeskno = new System.Windows.Forms.ComboBox();
+            this.txtDeskNo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -104,16 +105,25 @@ namespace CateringManager
             // 
             this.cboDeskno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDeskno.FormattingEnabled = true;
-            this.cboDeskno.Location = new System.Drawing.Point(146, 34);
+            this.cboDeskno.Location = new System.Drawing.Point(535, 202);
             this.cboDeskno.Name = "cboDeskno";
             this.cboDeskno.Size = new System.Drawing.Size(168, 26);
             this.cboDeskno.TabIndex = 3;
+            this.cboDeskno.Visible = false;
+            // 
+            // txtDeskNo
+            // 
+            this.txtDeskNo.Location = new System.Drawing.Point(159, 34);
+            this.txtDeskNo.Name = "txtDeskNo";
+            this.txtDeskNo.Size = new System.Drawing.Size(100, 28);
+            this.txtDeskNo.TabIndex = 4;
             // 
             // CustomList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 450);
+            this.Controls.Add(this.txtDeskNo);
             this.Controls.Add(this.cboDeskno);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -123,6 +133,7 @@ namespace CateringManager
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CustomList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List";
             this.Load += new System.EventHandler(this.CustomList_Load);
             this.ResumeLayout(false);
@@ -140,5 +151,6 @@ namespace CateringManager
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cboDeskno;
+        private System.Windows.Forms.TextBox txtDeskNo;
     }
 }

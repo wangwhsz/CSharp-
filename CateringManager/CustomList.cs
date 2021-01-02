@@ -42,7 +42,7 @@ namespace CateringManager
         {
             
             
-                string deskno = this.cboDeskno.SelectedText;
+                string deskno = this.txtDeskNo.Text;
                 int num = Convert.ToInt32(this.txtNum.Text);
                 string remark = txtRemark.Text;
                 // decimal price = Convert.ToDecimal(this.txtPrice.Text);
