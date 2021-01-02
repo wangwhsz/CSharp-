@@ -49,6 +49,11 @@ namespace DAL
 
         }
 
+        
+
+        
+        
+
         public int updatemenu(Menu menu)
         {
             string sql = "update Menu set price=@price where name=@name";

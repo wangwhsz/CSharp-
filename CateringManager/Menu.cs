@@ -20,21 +20,20 @@ namespace CateringManager
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
         }
 
         private void BtnaddClick(object sender, EventArgs e)
         {
-            string name = this.txtname.Text;
-            decimal price = Convert.ToDecimal(this.txtPrice.Text);
+            string name = txtname.Text;
+            decimal price = Convert.ToDecimal(txtPrice.Text);
             Model.Menu menu = new Model.Menu();
             menu.name = name;
             menu.price = price;
             int us = new MenuManager().insertMenu(menu);
-            if (us>0)
+            if (us > 0)
             {
                 MessageBox.Show("1");
-                Menu_Load(null,null);
+                Menu_Load(null, null);
             }
         }
 
@@ -50,22 +49,19 @@ namespace CateringManager
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string name = this.txtname.Text;
-            decimal price = Convert.ToDecimal(this.txtPrice.Text);
+            string name = txtname.Text;
+            decimal price = Convert.ToDecimal(txtPrice.Text);
             Model.Menu menu = new Model.Menu();
             menu.name = name;
             menu.price = price;
             int us = new MenuManager().updatemenu(menu);
             if (us > 0)
-            {
                 // MessageBox.Show("1");
                 Menu_Load(null, null);
-            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void BtnDel_Click(object sender, EventArgs e)
@@ -73,10 +69,10 @@ namespace CateringManager
             DataGridViewRow dataGridViewRow = dataGridView1.CurrentRow;
             int id = Convert.ToInt32(dataGridViewRow.Cells["id"].Value.ToString());
             int rs = new MenuManager().deletemenu(id);
-            if (rs>0)
+            if (rs > 0)
             {
                 MessageBox.Show("1");
-                Menu_Load(null,null);
+                Menu_Load(null, null);
             }
             else
             {

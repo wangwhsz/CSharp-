@@ -32,6 +32,7 @@ namespace CateringManager
             Desk desk = new Desk();
 
             desk.Show();
+            MenuMain_Load(null,null);
             
         }
 
@@ -98,10 +99,83 @@ namespace CateringManager
             // }
 
             // txtDeskNo.Text = lsView.SelectedItems[0].Text;
-            CustomList list = new CustomList(listView1);
-            list.Show();
+            
+            if (listView1.SelectedItems.Count==0)
+            {
+                MessageBox.Show("请选择餐桌");
+            }
+            else
+            {
+                if (listView1.SelectedItems[0].ImageIndex == 0)
+                {
+                    MessageBox.Show("此餐桌已经开单，不要重复开单");
+                    return;
+                }
+                string deskno = listView1.SelectedItems[0].Text;
+
+                CustomList list = new CustomList(listView1,deskno);
+                //todo:全局变量传过去
+                list.Show();
+                MenuMain_Load(null,null);
+            }
 
             
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("请选择餐桌");
+            }
+            else
+            {
+                if (listView1.SelectedItems[0].ImageIndex == 1)
+                {
+                    MessageBox.Show("此餐桌还未开单，无法取消开单");
+                    return;
+                }
+
+                string deskno = listView1.SelectedItems[0].Text;
+
+                // CustomList list = new CustomList(listView1, deskno);
+                //todo:全局变量传过去
+                // list.Show();
+                // CustomList list = new CustomList(listView1, deskno);
+                // list.
+                int result = new ListManager().deletelist(deskno);
+                int result1 = new ListManager().updatedesk(deskno,1);
+                if (result > 0 && result1 > 0)
+                {
+                    MessageBox.Show("删除开单成功");
+                    MenuMain_Load(null, null);
+
+                }
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("请选择餐桌");
+            }
+            else
+            {
+                if (listView1.SelectedItems[0].ImageIndex == 1)
+                {
+                    MessageBox.Show("该餐桌还未开单，请先开单");
+                    return;
+                }
+
+                string deskno = listView1.SelectedItems[0].Text;
+
+                ClientMenu client = new ClientMenu(listView1, deskno);
+                client.Show();
+                //todo:全局变量传过去
+                // list.Show();
+                MenuMain_Load(null, null);
+            }
         }
     }
 }

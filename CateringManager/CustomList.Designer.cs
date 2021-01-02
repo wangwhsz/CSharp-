@@ -36,8 +36,8 @@ namespace CateringManager
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.cboDeskno = new System.Windows.Forms.ComboBox();
             this.txtDeskNo = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -101,30 +101,31 @@ namespace CateringManager
             this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // cboDeskno
-            // 
-            this.cboDeskno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDeskno.FormattingEnabled = true;
-            this.cboDeskno.Location = new System.Drawing.Point(535, 202);
-            this.cboDeskno.Name = "cboDeskno";
-            this.cboDeskno.Size = new System.Drawing.Size(168, 26);
-            this.cboDeskno.TabIndex = 3;
-            this.cboDeskno.Visible = false;
-            // 
             // txtDeskNo
             // 
-            this.txtDeskNo.Location = new System.Drawing.Point(159, 34);
+            this.txtDeskNo.Location = new System.Drawing.Point(136, 34);
             this.txtDeskNo.Name = "txtDeskNo";
             this.txtDeskNo.Size = new System.Drawing.Size(100, 28);
             this.txtDeskNo.TabIndex = 4;
+            this.txtDeskNo.TextChanged += new System.EventHandler(this.txtDeskNo_TextChanged);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(226, 376);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.Text = "button3";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // CustomList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtDeskNo);
-            this.Controls.Add(this.cboDeskno);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtRemark);
@@ -150,7 +151,7 @@ namespace CateringManager
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox cboDeskno;
         private System.Windows.Forms.TextBox txtDeskNo;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientService.cs" />
     <Compile Include="DeskService.cs" />
     <Compile Include="ListService.cs" />
     <Compile Include="MenuServices.cs" />

@@ -20,6 +20,11 @@ namespace BLL
             return new MenuServices().getmenulist();
         }
 
+        // public List<Client> getclientmenulist()
+        // {
+        //     return new MenuServices().getclientmenulist();
+        // }
+
         public int updatemenu(Menu menu)
         {
             return new MenuServices().updatemenu(menu);
@@ -31,5 +36,15 @@ namespace BLL
             return new MenuServices().deletemenu(id);
 
         }
+        //消费录入中的选择项
+        // public List<Menu> selectandinsert(string name)
+        // {
+        //     return new MenuServices().selectandinsert(name);
+        // }
+        //
+        // public List<Menu> getitem(string name)
+        // {
+        //     return new MenuServices().getitem(name);
+        // }
     }
 }

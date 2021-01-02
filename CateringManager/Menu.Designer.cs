@@ -33,12 +33,12 @@ namespace CateringManager
             this.BtnDel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -95,13 +95,35 @@ namespace CateringManager
             this.groupBox1.Text = "添加菜单";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(47, 406);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(84, 31);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "button1";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnaddClick);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(212, 406);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(84, 28);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "修改";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(97, 278);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(240, 28);
-            this.txtPrice.TabIndex = 1;
+            this.txtPrice.TabIndex = 2;
             // 
             // txtname
             // 
@@ -128,28 +150,6 @@ namespace CateringManager
             this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "菜品";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(47, 406);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(84, 31);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "button1";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnaddClick);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(212, 406);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(84, 28);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "修改";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // Menu
             // 

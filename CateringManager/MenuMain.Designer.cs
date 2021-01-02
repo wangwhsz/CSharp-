@@ -89,6 +89,7 @@ namespace CateringManager
             this.toolStripButton2.Size = new System.Drawing.Size(126, 89);
             this.toolStripButton2.Text = "取消开单";
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -100,6 +101,7 @@ namespace CateringManager
             this.toolStripButton3.Size = new System.Drawing.Size(126, 89);
             this.toolStripButton3.Text = "消费录入";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -187,8 +189,8 @@ namespace CateringManager
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "wr.bmp");
-            this.imageList1.Images.SetKeyName(1, "yr.bmp");
+            this.imageList1.Images.SetKeyName(0, "yr.bmp");
+            this.imageList1.Images.SetKeyName(1, "wr.bmp");
             // 
             // MenuMain
             // 
